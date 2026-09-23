@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- Phần tiêu đề ở đầu màn hình -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="32dp">
+
+        <!-- Dòng "Welcome to AutoVoice" với màu riêng -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to "
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AutoVoice"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/google_button_stroke_color"
+                android:fontFamily="sans-serif-medium"/>
+        </LinearLayout>
+
+
+        <!-- Dòng mô tả đã được tóm gọn -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The easiest way to convert text to natural-sounding audio."
+            android:textSize="14sp"
+            android:textColor="#424242"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <!-- Hình ảnh responsive ở giữa, sẽ co dãn theo không gian còn lại -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_splash_illustration"
+        android:contentDescription="Splash Screen Image"
+        android:scaleType="fitCenter"
+        android:padding="16dp" />
+
+    <!-- Nút Bắt đầu ở dưới cùng -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/google_button_stroke_color"
+        app:cornerRadius="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+</LinearLayout>

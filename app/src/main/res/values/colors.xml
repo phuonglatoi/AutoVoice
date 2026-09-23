@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="button_login_color">#BA68C8</color>
+    <color name="app_primary_color">#BA68C8</color>
+<color name="app_accent_color">#FF03DAC5</color>
+<color name="app_background_color">#FFFFFFFF</color>
+<color name="text_primary_color">#DE000000</color>
+<color name="text_secondary_color">#8A000000</color>
+<color name="text_input_color">#DD000000</color>
+<color name="black">#FF000000</color>
+<color name="white">#FFFFFFFF</color>
+    <color name="grey_400">#BDBDBD</color>
+<color name="design_default_color_on_surface">#00BCD4</color>
+    <color name="app_primary_variant_color">#FF03DAC5</color>
+    <color name="google_button_stroke_color">#BF4BD3</color>
+    <color name="button_generate_audio_color">#BA68C8</color>
+    <color name="button_download_audio_color">#BA68C8</color>
+    <color name="page_background">#FFFFFF</color>
+    <color name="billing_text_title">#333333</color>
+    <color name="bottom_nav_item_color">#BA68C8</color>
+
+
+
+    <color name="table_header_background_flat">#E8EAF6</color> <color name="table_header_text_flat">#424242</color> <color name="table_row_background_even_flat">#F5F5F5</color> <color name="table_row_background_odd_flat">#FFFFFF</color>  <color name="table_label_text_flat">#455A64</color> <color name="table_value_text_flat">#37474F</color> <color name="table_divider_flat">#D1D9E1</color>
+</resources>

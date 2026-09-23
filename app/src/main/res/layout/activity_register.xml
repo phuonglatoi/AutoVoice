@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="@color/app_background_color"
+    android:layoutAnimation="@anim/layout_animation_fall_down"
+    tools:context=".activities.RegisterActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgRegisterIllustration" android:layout_width="180dp"
+        android:layout_height="160dp"
+        android:src="@drawable/register_illustration"
+        android:scaleType="centerInside"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.App.MediumComponent.Rounded"
+        android:contentDescription="Hình minh họa đăng ký" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register New Account" android:textSize="28sp"               android:fontFamily="sans-serif-medium"
+        android:textColor="@color/text_primary_color"
+        android:layout_marginBottom="32dp"/> <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/tilRegisterEmail" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:boxCornerRadiusTopStart="16dp"
+    app:boxCornerRadiusTopEnd="16dp"
+    app:boxCornerRadiusBottomStart="16dp"
+    app:boxCornerRadiusBottomEnd="16dp"
+    app:startIconDrawable="@drawable/ic_email"
+    app:startIconTint="@color/text_secondary_color"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtEmail" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/text_input_color"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"/>
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRegisterUsername" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:startIconDrawable="@drawable/ic_person_register"
+        app:startIconTint="@color/text_secondary_color"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtUsername" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="text"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_input_color"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRegisterPassword" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="@color/text_secondary_color"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/text_secondary_color"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassword" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password (min 6 chars)"
+            android:inputType="textPassword"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_input_color"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRegisterConfirmPassword" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="@color/text_secondary_color"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/text_secondary_color"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtConfirmPassword" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text_input_color"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/app_primary_color"
+        app:cornerRadius="16dp"
+        android:layout_marginBottom="24dp"/>
+    <com.google.android.material.button.MaterialButton
+    android:id="@+id/btnToLogin" style="@style/Widget.MaterialComponents.Button.TextButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Already have an account? LOGIN"
+    android:textAllCaps="false"
+    android:textColor="@color/app_accent_color"
+    android:fontFamily="sans-serif-medium"
+    android:textSize="15sp"/>
+
+</LinearLayout>

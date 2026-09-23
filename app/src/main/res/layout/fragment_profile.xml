@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".fragments.ProfileFragment">
+
+    <!-- Background Image with 0.2 alpha -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/profile_background_image"
+        android:scaleType="centerCrop"
+        android:alpha="0.2"
+        tools:ignore="ContentDescription" />
+
+    <!-- Main Content Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp"
+        android:background="@android:color/transparent">
+
+        <!-- Profile Image with a colored border to match the theme -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_profile_placeholder"
+            app:civ_border_width="4dp"
+            app:civ_border_color="@color/google_button_stroke_color"/>
+
+        <!-- User Name TextView -->
+        <TextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USERNAME"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <!-- User Email TextView -->
+        <TextView
+            android:id="@+id/tvProfileEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email@example.com"
+            android:textColor="#424242"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Spacer to push buttons down -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Change Password Button - Styled as a primary action button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHANGE PASSWORD"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@color/google_button_stroke_color"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Logout Button - Styled as a secondary/outlined action button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogoutProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOG OUT"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            app:strokeColor="@color/google_button_stroke_color"
+            android:textColor="@color/google_button_stroke_color"
+            app:cornerRadius="8dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

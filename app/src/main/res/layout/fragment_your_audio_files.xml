@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9FAFB" tools:context=".fragments.AudioFilesFragment">
+
+    <TextView
+        android:id="@+id/tvAudioFilesTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Audio Files"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1F2937" android:paddingTop="24dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tvAudioFilesSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We keep files for 30 days, so don't forget to download them."
+        android:textSize="14sp"
+        android:textColor="#6B7280" android:paddingBottom="16dp"
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/llTableHeaders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/app_primary_color" android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="File Name"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="Play"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="Download"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayoutAudioFiles"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/audioFilesListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null" android:dividerHeight="0dp"
+            android:background="@android:color/white" android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvNoAudioFiles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:text="No audio files found.\nTry creating a new one!"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#4B5563" android:padding="24dp"
+        android:background="@android:color/white" android:visibility="gone"/> </LinearLayout>
